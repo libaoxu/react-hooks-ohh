@@ -15,15 +15,19 @@ Hook 在非 class 的情况下可以使用更多的 React 特性，比如不需�
 Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[自定义hook](./src/hooks/11_useDebugValue_customHook.js)
 
 - <p>可将组件拆分更小粒度</p>
-Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。
+Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。如: [useEffect](./src/hooks/03_useEffectChild.js)
 
----
+- <p id="effectUpdate">简化了不同生命周期中相同的代码逻辑</p> 
+详见: [useEffectPropsChange](./src/hooks/03_useEffectPropsChange.js)
+
 
 ## [Hook API](https://react.docschina.org/docs/hooks-reference.html)
 
 1. ### [useState](./src/hooks/02_useState.js)
 
 2. ### [useEffect](./src/hooks/03_useEffect.js)
+
+#### 为什么每次更新的时候都要运行 Effect, 详见: [useEffectPropsChange](./src/hooks/03_useEffectPropsChange.js), 从案例中可以看出`之前class组件不同生命周期中相同的逻辑被复用了`, 与优点中[简化了不同生命周期中相同的代码逻辑](#effectUpdate)相对应
 
 3. ### [useReducer](./src/hooks/04_useReducer.js)
 
