@@ -31,12 +31,14 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 
 3. ### [useReducer](./src/hooks/04_useReducer.js)
 
+*注意*: 这里的reducer并不是表示redux里面的reducer, 只是表示一个复杂计算的纯函数场景, 如果想在redux中使用Hook, 详细请参考: [react-redux Hook](https://react-redux.js.org/next/api/hooks)
+
 4. ### [useContext](./src/hooks/05_useContext.js)
 > [Context](https://zh-hans.reactjs.org/docs/context.html#___gatsby) 作用：对它所包含的组件树提供全局共享数据的一种技术。
 
-5. ### [useCallback](./src/hooks/06_useCallback.js)
+5. ### [useMemo](./src/hooks/07_useMemo.js)
 
-6. ### [useMemo](./src/hooks/07_useMemo.js)
+6. ### [useCallback](./src/hooks/06_useCallback.js)
 
 7. ### [useRef](./src/hooks/08_useRef.js)
 

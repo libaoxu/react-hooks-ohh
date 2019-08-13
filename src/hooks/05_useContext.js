@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HookUseContextChi from './05_useContextChild'
+import HookUseContextChild from './05_useContextChild'
 export const MyContext = React.createContext()
 
 const Provider = MyContext.Provider
@@ -10,7 +10,7 @@ export default function HookUseContext (props) {
 
   return <div>
     <Provider value={name}>
-      <HookUseContextChi />
+      <HookUseContextChild />
     </Provider>
   </div>
 }
