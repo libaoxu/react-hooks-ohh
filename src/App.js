@@ -32,8 +32,8 @@ export default function App () {
     <HookWithoutUseMemo />
     <HookWithUseMemo />
 
-    <HookWithoutUseCallback />
-    <HookWithUseCallback />
+    {/* <HookWithoutUseCallback />
+    <HookWithUseCallback /> */}
 
     {/* <HookUseRef /> */}
 
