@@ -9,13 +9,16 @@
 ### 😍Hooks 优点：
 
 - <p>拥抱函数</p>
-Hook 在非 class 的情况下可以使用更多的 React 特性，比如不需要像 class 组件 render 中对每个变量进行解构，需要不停的使用 this，不需要考虑bind等。如：[有状态组件 & 无状态组件](./src/hooks/01_classComponent_hooks.js)
+Hook 在非 class 的情况下可以使用更多的 React 特性，比如不需要像 class 组件 render 中对每个变量进行解构，需要不停的使用 this，不需要考虑bind等。如：[有状态组件 & 无状态组件](./src/hooks/01_classComponent_hooks.js)。
 
 - <p>组件之间复用状态逻辑</p>
-Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[自定义hook](./src/hooks/11_useDebugValue_customHook.js)
+Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[自定义hook](./src/hooks/11_useDebugValue_customHook.js)。
 
 - <p>可将组件拆分更小粒度</p>
-Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。
+Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。如: [useEffect](./src/hooks/03_useEffectChild.js)。
+
+- <p>简化了不同生命周期中相同的代码逻辑</p> 
+为什么每次更新的时候都要运行 Effect，如：[useEffectPropsChange](./src/hooks/03_useEffectPropsChange.js)，从案例中可以看出`之前class组件不同生命周期中相同的逻辑被复用了`。
 
 ## [Hook API](https://react.docschina.org/docs/hooks-reference.html)
 
@@ -24,13 +27,14 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 2. ### [useEffect](./src/hooks/03_useEffect.js)
 
 3. ### [useReducer](./src/hooks/04_useReducer.js)
+*注意*：这里的 reducer 并不是表示 redux 里面的 reducer，只是表示一个复杂计算的纯函数场景，如果想在 redux 中使用 Hook，详细请参考：[react-redux Hook](https://react-redux.js.org/next/api/hooks)
 
 4. ### [useContext](./src/hooks/05_useContext.js)
-> [Context](https://zh-hans.reactjs.org/docs/context.html#___gatsby) 作用：对它所包含的组件树提供全局共享数据的一种技术。
+*注意*：[Context](https://zh-hans.reactjs.org/docs/context.html#___gatsby) 作用：对它所包含的组件树提供全局共享数据的一种技术。
 
-5. ### [useCallback](./src/hooks/06_useCallback.js)
+5. ### [useMemo](./src/hooks/06_useMemo.js)
 
-6. ### [useMemo](./src/hooks/07_useMemo.js)
+6. ### [useCallback](./src/hooks/07_useCallback.js)
 
 7. ### [useRef](./src/hooks/08_useRef.js)
 
@@ -41,7 +45,7 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 10. ### [useDebugValue](./src/hooks/11_useDebugValue_customHook.js)
 
 11. ### [自定义hooks](./src/hooks/11_useDebugValue_customHook.js)
-> 自定义hooks：利用react hooks封装成一个具有特定逻辑的，或可重用的函数。`必须以use开头。`
+*注意*：自定义 hooks 是利用 react hooks 封装成一个具有特定逻辑的，或可重用的函数。`必须以use开头。`
 
 ## [使用规则](https://react.docschina.org/docs/hooks-rules.html)
 
