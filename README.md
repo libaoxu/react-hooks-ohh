@@ -17,8 +17,6 @@ Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[�
 - <p>可将组件拆分更小粒度</p>
 Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。
 
----
-
 ## [Hook API](https://react.docschina.org/docs/hooks-reference.html)
 
 1. ### [useState](./src/hooks/02_useState.js)
@@ -45,11 +43,10 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 11. ### [自定义hooks](./src/hooks/11_useDebugValue_customHook.js)
 > 自定义hooks：利用react hooks封装成一个具有特定逻辑的，或可重用的函数。`必须以use开头。`
 
----
-
 ## [使用规则](https://react.docschina.org/docs/hooks-rules.html)
 
 - 多个 useState 相互独立，必须把 hooks 写在`最顶层`。
+
 ```js
 import React, { useState, useEffect } from 'react'
 
