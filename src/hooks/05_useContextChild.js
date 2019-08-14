@@ -18,6 +18,8 @@ function HookUseContextChildChild () {
   return <div>
     <p>useContext ChildChild Value: {contextValue}</p>
     {/* 两种写法都差不多, 还是上面的更简单一些 */}
-    <MyContext.Consumer>{value => <p>MyContext.Consumer ChildChild Value: {value}</p>}</MyContext.Consumer>
+    <MyContext.Consumer>
+      {value => <p>MyContext.Consumer ChildChild Value: {value}</p>}
+    </MyContext.Consumer>
   </div>
 }

@@ -5,8 +5,8 @@ import { HookUseEffect, HookUseEffectReturn } from './hooks/03_useEffect'
 import HookUseEffectPropsChange from './hooks/03_useEffectPropsChange'
 import HookUseReducer from './hooks/04_useReducer'
 import HookUseContext from './hooks/05_useContext'
-import { HookWithUseMemo, HookWithoutUseMemo } from './hooks/05_useMemo'
-import { HookWithoutUseCallback, HookWithUseCallback } from './hooks/06_useCallback'
+import { HookWithUseMemo, HookWithoutUseMemo } from './hooks/06_useMemo'
+import { HookWithoutUseCallback, HookWithUseCallback } from './hooks/07_useCallback'
 import HookUseRef from './hooks/08_useRef'
 import { ForWardFancyInput } from './hooks/09_useImperativeHandle'
 import HookUseLayoutEffect from './hooks/10_useLayoutEffect'
@@ -29,11 +29,11 @@ export default function App () {
     
     {/* <HookUseContext /> */}
     
-    <HookWithoutUseMemo />
-    <HookWithUseMemo />
+    {/* <HookWithoutUseMemo />
+    <HookWithUseMemo /> */}
 
-    {/* <HookWithoutUseCallback />
-    <HookWithUseCallback /> */}
+    <HookWithoutUseCallback />
+    <HookWithUseCallback />
 
     {/* <HookUseRef /> */}
 
