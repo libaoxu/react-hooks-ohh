@@ -17,8 +17,8 @@ export default function App () {
   const forwardInputRef = React.createRef()
 
   return <div className="App">
-    {/* <ClassComponent inke='inke~' />
-    <Hooks inke='inke~' /> */}
+    <ClassComponent inke='inke~' />
+    <Hooks inke='inke~' />
 
     {/* <HookUseEffectPropsChange /> */}
     
@@ -48,10 +48,10 @@ export default function App () {
 
     {/* <HookUseLayoutEffect /> */}
 
-    <CommentListWithSubscription />
+    {/* <CommentListWithSubscription />
     <BlogPostWithSubscription />
     <UseHookCommentList />
-    <UseHookBlogPost />
+    <UseHookBlogPost /> */}
     
     {/* <HookUseDebugValue /> */}
   </div>
