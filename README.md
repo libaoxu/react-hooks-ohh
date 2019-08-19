@@ -47,16 +47,16 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 
 11. ### [useDebugValue](./src/hooks/11_useDebugValue.js)
 
-## [使用规则](https://react.docschina.org/docs/hooks-rules.html)
+## [使用规则](https://zh-hans.reactjs.org/docs/hooks-rules.html)
 
-- 多个 useState 相互独立，必须把 hooks 写在`最顶层`。
+- 多个 useState 相互独立，必须把 hooks 写在`最顶层`。React 靠的是 Hook 调用的顺序知道 state 对应哪个 useState。只要 Hook 的调用顺序在多次渲染之间保持一致，React 就能正确地将内部 state 和对应的 Hook 进行关联。
 
 ```js
 import React, { useState, useEffect } from 'react'
 
 export default function Index () {
   const { name, setName } = useState('')
-  // 在条件语句中使用Hook违反第一条规则
+  // 不能在条件语句中使用Hook
   if (name !== '') {
     useEffect(() => {
       console.log('错误写法')
