@@ -17,14 +17,15 @@ export default function App () {
   const forwardInputRef = React.createRef()
 
   return <div className="App">
-    {/* <ClassComponent inke='inke~' /> */}
-    {/* <Hooks inke='inke~' /> */}
+    {/* <ClassComponent inke='inke~' />
+    <Hooks inke='inke~' /> */}
+
+    {/* <HookUseEffectPropsChange /> */}
     
     {/* <HookUseState /> */}
     
-    {/* <HookUseEffect /> */}
-    {/* <HookUseEffectReturn /> */}
-    {/* <HookUseEffectPropsChange /> */}
+    {/* <HookUseEffect />
+    <HookUseEffectReturn /> */}
     
     {/* <HookUseReducer /> */}
     

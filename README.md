@@ -9,7 +9,7 @@
 ### 😍Hooks 优点：
 
 - <p>拥抱函数</p>
-Hook 在非 class 的情况下可以使用更多的 React 特性，比如不需要像 class 组件 render 中对每个变量进行解构，需要不停的使用 this，不需要考虑bind等。如：[有状态组件 & 无状态组件](./src/hooks/01_classComponent_hooks.js)。
+Hook 在非 class 的情况下可以使用更多的 React 特性，比如不需要像 class 组件 render 中对每个变量进行解构，不需要不停的使用 this，不需要考虑bind等。如：[有状态组件 & 无状态组件](./src/hooks/01_classComponent_hooks.js)。
 
 - <p>组件之间复用状态逻辑</p>
 Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[自定义hook](./src/hooks/11_customHook.js)。
@@ -18,7 +18,7 @@ Hook 使你在无需修改组件结构的情况下复用状态逻辑。如：[�
 Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强制按照生命周期划分。如: [useEffect](./src/hooks/03_useEffectChild.js)。
 
 - <p>简化了不同生命周期中相同的代码逻辑</p> 
-为什么每次更新的时候都要运行 Effect，如：[useEffectPropsChange](./src/hooks/03_useEffectPropsChange.js)，从案例中可以看出`之前class组件不同生命周期中相同的逻辑被复用了`。
+对比 class 组件，hook 中`不同生命周期中相同的逻辑被复用了`。如：[useEffectPropsChange](./src/hooks/03_useEffectPropsChange.js)
 
 ## [Hook API](https://react.docschina.org/docs/hooks-reference.html)
 
@@ -42,10 +42,10 @@ Hook 将组件中`相互关联的部分`拆分成更小的函数，而并非强�
 
 9. ### [useLayoutEffect](./src/hooks/10_useLayoutEffect.js)
 
-10. ### [useDebugValue](./src/hooks/11_useDebugValue.js)
-
-11. ### [自定义hooks](./src/hooks/11_customHook.js)
+10. ### [自定义hooks](./src/hooks/11_customHook.js)
 *注意*：自定义 hooks 是利用 react hooks 封装成一个具有特定逻辑的，或可重用的函数。`必须以use开头。`
+
+11. ### [useDebugValue](./src/hooks/11_useDebugValue.js)
 
 ## [使用规则](https://react.docschina.org/docs/hooks-rules.html)
 

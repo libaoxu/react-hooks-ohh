@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react'
 
 // useMemo
 // 我们来看一个反例：
-export function HookWithoutUseMemo() {
+export function HookWithoutUseMemo () {
 	const [count, setCount] = useState(1)
 	const [val, setValue] = useState('')
   
@@ -29,7 +29,7 @@ export function HookWithoutUseMemo() {
 	</div>
 }
 
-export function HookWithUseMemo() {
+export function HookWithUseMemo () {
 	const [count, setCount] = useState(1)
 	const [val, setValue] = useState('')
 	/**

@@ -17,11 +17,11 @@ const DataSource = {
   },
 
   getComments () {
-    return JSON.stringify([{ desc: '1' }, { desc: '2' }], null, 2)
+    return JSON.stringify([{ desc: '看' }, { desc: '不' }], null, 2)
   },
 
   getBlogPost () {
-    return JSON.stringify([{ desc: '11' }, { desc: '22' }], null, 2)
+    return JSON.stringify([{ desc: '懂' }, { desc: '啊' }], null, 2)
   }
 }
 

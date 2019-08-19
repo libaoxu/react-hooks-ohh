@@ -5,9 +5,9 @@ import React, { useState, useCallback, useEffect } from 'react';
  * 应用场景：耗时的计算，复杂的业务逻辑
  * @param {Function} 必选 callback
  * @param {Array} 可选 
- * 1.不传：每次组件渲染时都调用
- * 2.传[]：commponentDidMount&componentDidUpdate的时候调用
- * 3.传[state]: state改变时调用
+ * 1.不传：commponentDidMount&componentDidUpdate的时候调用
+ * 2.传[]：仅commponentDidMount会调用
+ * 3.传[state|props]: commponentDidMount, state|props改变时调用
  */
 function Child({ getCount }) {
 	const [count, setCount] = useState(() => getCount())

@@ -24,10 +24,8 @@ export default function UseEffectPropsChange () {
   </div>
 }
 
-/**
- * 先看一下大家熟悉class写法, 主要跟useEffect进行对比
- * 场景: 子组件props接收一个id, 当id发生变化就请求接口, 获取等级信息, 并在页面中展示出来
- */
+
+// class 写法
 class UseEffectChildClass extends React.Component {
   static defaultProps = {
     id: null
@@ -38,7 +36,7 @@ class UseEffectChildClass extends React.Component {
   }
 
   componentDidMount () {
-    console.log('componentDidMount this.props.id: ', this.props.id)
+    console.log('componentDidMount: ', this.props.id)
     fetchUserInfo(this.props.id).then(({ level }) => this.setState({ level }))
   }
   
@@ -46,7 +44,7 @@ class UseEffectChildClass extends React.Component {
    * props 或 state变化都会执行 componentDidUpdate
    */
   componentDidUpdate (preProps) {
-    console.log('componentDidUpdate this.props.id: ', this.props.id)
+    console.log('componentDidUpdate: ', this.props.id)
     // 判断 props 中 id的变化
     if (preProps.id !== this.props.id) {
       fetchUserInfo(this.props.id).then(({ level }) => this.setState({ level }))
@@ -58,9 +56,8 @@ class UseEffectChildClass extends React.Component {
   }
 }
 
-/**
- * 函数式方式 useEffect 实现上述逻辑
- */
+
+// hook 写法（useEffect）
 function UseEffectChild ({ id }) {
   const [level, setLevel] = useState('')
 
@@ -69,16 +66,16 @@ function UseEffectChild ({ id }) {
    * 
    * useEffect优势:
    * 1. 判断props中id的变化
-   *    class 需要在componentDidUpdate生命周期里写 if 判断逻辑
-   *    useEffect只需要传入第二个参数即可: [id] (减少判断逻辑)
+   *    class 写法：需要在componentDidUpdate生命周期里写 if 判断逻辑
+   *    hook 写法：只需要在 useEffect 传入第二个参数即可: [id] (减少判断逻辑)
    * 2. 请求接口的相关逻辑
-   *    class 需要在componentDidMount 和 componentDidUpdate两个生命周期都处理重复逻辑
-   *    useEffect因为集成了不同生命周期执行的时机, 只需要关注一次写一遍即可
+   *    class 写法：需要在componentDidMount 和 componentDidUpdate两个生命周期都处理重复逻辑
+   *    hook 写法：因为useEffect集成了不同生命周期执行的时机, 只需要关注一次写一遍即可
    * 
-   * 综上: 相比 class 而言 useEffect `简化了不同生命周期中相同的代码逻辑` 更简洁, 更清晰
+   * 综上: 相比 class 而言 hook 写法 `简化了不同生命周期中相同的代码逻辑` 更简洁, 更清晰
    */
   useEffect(() => {
-    console.log('useEffect props.id: ', id)
+    console.log('useEffect: ', id)
     fetchUserInfo(id).then(({ level }) => setLevel(level))
   }, [id])
 
