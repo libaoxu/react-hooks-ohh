@@ -10,7 +10,8 @@ import { HookWithoutUseCallback, HookWithUseCallback } from './hooks/07_useCallb
 import HookUseRef from './hooks/08_useRef'
 import { ForWardFancyInput } from './hooks/09_useImperativeHandle'
 import HookUseLayoutEffect from './hooks/10_useLayoutEffect'
-import HookUseDebugValue from './hooks/11_useDebugValue_customHook'
+import { CommentListWithSubscription, BlogPostWithSubscription, UseHookCommentList, UseHookBlogPost } from './hooks/11_customHook'
+import HookUseDebugValue from './hooks/11_useDebugValue'
 
 export default function App () {
   const forwardInputRef = React.createRef()
@@ -32,8 +33,8 @@ export default function App () {
     {/* <HookWithoutUseMemo />
     <HookWithUseMemo /> */}
 
-    <HookWithoutUseCallback />
-    <HookWithUseCallback />
+    {/* <HookWithoutUseCallback />
+    <HookWithUseCallback /> */}
 
     {/* <HookUseRef /> */}
 
@@ -45,6 +46,11 @@ export default function App () {
     }}>setFocus</button> */}
 
     {/* <HookUseLayoutEffect /> */}
+
+    <CommentListWithSubscription />
+    <BlogPostWithSubscription />
+    <UseHookCommentList />
+    <UseHookBlogPost />
     
     {/* <HookUseDebugValue /> */}
   </div>
